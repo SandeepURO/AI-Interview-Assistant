@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>AI Interview Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Interview Preparation Assistant</h1>
+
+    <label for="role">Choose a role:</label>
+    <select id="role" aria-label="Select role">
+        <option value="Machine Learning Intern">Machine Learning Intern</option>
+        <option value="Data Science Intern">Data Science Intern</option>
+        <option value="Python Developer">Python Developer</option>
+        <option value="Software Engineering Intern">Software Engineering Intern</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="DevOps Intern">DevOps Intern</option>
+    </select>
+
+    <br><br>
+
+    <button type="button" onclick="generateQuestions()">Generate Questions</button>
+
+    <button type="button" id="export-pdf-btn" onclick="exportQuestionsToPDF()">Download PDF</button>
+
+    <h2 class="dashboard-title">Interview Summary Dashboard</h2>
+
+    <div id="feedback-card" class="feedback-card">
+        <h3>AI Feedback System</h3>
+        <div id="score">Score: 0/10</div>
+        <div class="progress-container" id="progress-container" style="display:none;">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="summary">Performance: Not Started</div>
+        <div id="completed-count">Questions Completed: 0</div>
+        <div id="feedback"></div>
+    </div>
+
+    <div id="questions" aria-live="polite"></div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
